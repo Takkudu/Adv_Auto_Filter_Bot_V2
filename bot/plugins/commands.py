@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🛡️JOIN OUR GROUP🛡️', url="https://t.me/Cinimafactory2"
+                                    '🛡️JOIN OUR CHANNEL🛡️', url="https://t.me/joinchat/nAJOyC9EPe5kMTBl"
                                 )
                         ]
                     ]
