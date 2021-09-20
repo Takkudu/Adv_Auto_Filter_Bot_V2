@@ -470,7 +470,7 @@ class Database(metaclass=Singleton):
         file_id = None
         file_type = None
         file_name = None
-        file_caption =CinemaFactory_All
+        file_caption = "@CinemaFactory_All"
         
         if file:
             file_id = file.get("file_id")
