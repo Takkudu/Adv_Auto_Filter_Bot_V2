@@ -470,13 +470,13 @@ class Database(metaclass=Singleton):
         file_id = None
         file_type = None
         file_name = None
-        file_caption = None
+        file_caption =CinemaFactory_All
         
         if file:
             file_id = file.get("file_id")
             file_name = file.get("file_name")
             file_type = file.get("file_type")
-            file_caption = file.get("caption")
+            file_caption = file.get("file_caption")
         return file_id, file_name, file_caption, file_type
 
 
