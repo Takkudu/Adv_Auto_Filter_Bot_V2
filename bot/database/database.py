@@ -470,7 +470,7 @@ class Database(metaclass=Singleton):
         file_id = None
         file_type = None
         file_name = None
-        file_caption =("<code>" + JOIN <a href="https://t.me/cinemafactory_all">ℂ𝕚𝕟𝕖𝕞𝕒𝔽𝕒𝕔𝕥𝕠𝕣𝕪_𝔸𝕝𝕝</a> + "</code>"
+        file_caption ="<code>" + JOIN <a href="https://t.me/cinemafactory_all">ℂ𝕚𝕟𝕖𝕞𝕒𝔽𝕒𝕔𝕥𝕠𝕣𝕪_𝔸𝕝𝕝</a> + "</code>"
         
         if file:
             file_id = file.get("file_id")
