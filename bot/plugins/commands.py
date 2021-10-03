@@ -11,7 +11,30 @@ db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-    
+   
+     user = await client.get_chat_member(int(AUTH_CHANNEL), message.from_user.id)
+            if user.status == "kicked":
+                await client.send_message(
+                    chat_id=message.from_user.id,
+                    text="Sorry Sir, You are Banned to use me.",
+                    parse_mode="markdown",
+                    disable_web_page_preview=True
+                )
+                return
+        except UserNotParticipant:
+            await client.send_message(
+                chat_id=message.from_user.id,
+                text="**Please Join My Updates Channel to use this Bot!**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        ]
+                    ]
+                ),
+                parse_mode="markdown"
+            )
+
     try:
         file_uid = update.command[1]
     except IndexError:
