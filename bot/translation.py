@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG
 
-class Translation(object):
-   
-  await cmd.reply_photo(
+class Translation(object):  
+  reply_photo(
     photo="https://telegra.ph/file/bf038c38666d51adeada9.jpg",
     START_TEXT = """<b>Hey {} How Are You!!</b>
 <i>Am Just A Advance Auto Filter Bot....😉
