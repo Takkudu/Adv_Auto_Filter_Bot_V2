@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '♻️SHARE ME♻️', url="https://t.me/CrazBotsz"
+                                    '♻️SHARE ME♻️', url="https://t.me/share/url?url=%20https://t.me/Cinimafactory2"
                                 )
                         ]
                     ]
