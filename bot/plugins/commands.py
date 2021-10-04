@@ -48,7 +48,7 @@ async def start(bot, update):
 
     buttons = [[
         InlineKeyboardButton('🔥My Dev', url='https://t.me/anilsebastian'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/Crazyotsz/Adv-A-Filter-Bot-V2')
+        InlineKeyboardButton('Source Code 🧾', url='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
     ],[
         InlineKeyboardButton('Support 🛠', url='https://t.me/Asbotz')
     ],[
