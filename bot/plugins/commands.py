@@ -12,30 +12,7 @@ db = Database()
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
    
-   update_channel = 'CinemaFactory'
-   if update_channel
       try:
-      user = await client.get_chat_member(update_channel), update.chat.id)
-            if user.status == "kicked":
-                await client.send_message(
-                    chat_id=message.from_user.id,
-                    text="Sorry Sir, You are Banned to use me.",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
-        except UserNotParticipant:
-            await client.send_message(
-                chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!**",
-                reply_markup=InlineKeyboardMarkup([
-                      [InlineKeyboardButton("🤖 Join Updates Channel", url=https://t.me/joinchat/nAJOyC9EPe5kMTBl)            
-                ])
-               ),
-             return
-             except Exception:
-             await update.replay.text("something Wrong. Contactmy support group")
-   try:
         file_uid = update.command[1]
     except IndexError:
         file_uid = False
@@ -47,7 +24,8 @@ async def start(bot, update):
             return
         
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
-        try:
+      
+            try:
             await update.reply_cached_media(
                 file_id,
                 quote=True,
