@@ -34,7 +34,7 @@ async def start(bot, update):
                 ),
                 parse_mode="markdown"
             )
-
+          return
     try:
         file_uid = update.command[1]
     except IndexError:
