@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '♻️SHARE ME♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
+                                    '♻️ՏᎻᎪᎡᎬ ᎷᎬ♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
                                 )
                         ]
                     ]
@@ -47,12 +47,12 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🔥My Dev', url='https://t.me/Techno_ka_magic'),
-        InlineKeyboardButton('Source Code 🧾', url ='')
+        InlineKeyboardButton('🔥ᎷᎽ ᎠᎬᏙ', url='https://t.me/Techno_ka_magic'),
+        InlineKeyboardButton('ՏϴႮᎡᏟᎬ ᏟϴᎠᎬ🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/asbotz')
+        InlineKeyboardButton('ՏႮᏢᏢϴᎡͲ 🛠', url='https://t.me/asbotz')
     ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
+        InlineKeyboardButton('ᎻᎬᏞᏢ ⚙', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -70,10 +70,10 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
+        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
+        InlineKeyboardButton('ᎪᏴϴႮͲ 🚩', callback_data='about')
     ],[
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -91,8 +91,8 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
+        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
