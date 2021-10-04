@@ -28,24 +28,13 @@ async def start(bot, update):
             await client.send_message(
                 chat_id=message.from_user.id,
                 text="**Please Join My Updates Channel to use this Bot!**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("🤖 Join Updates Channel", url=https://t.me/joinchat/nAJOyC9EPe5kMTBl)
-                        ]
-                    ]
-                ),
-                parse_mode="markdown"
-            )
-            return
-        except Exception:
-            await client.send_message(
-                chat_id=message.from_user.id,
-                text="Something went Wrong.",
-                parse_mode="markdown",
-                disable_web_page_preview=True
-            )
-            return
+                reply_markup=InlineKeyboardMarkup([
+                      [InlineKeyboardButton("🤖 Join Updates Channel", url=https://t.me/joinchat/nAJOyC9EPe5kMTBl)            
+                ])
+               ),
+             return
+             except Exception:
+             await update.replay.text("something Wrong. Contactmy support group")
    try:
         file_uid = update.command[1]
     except IndexError:
