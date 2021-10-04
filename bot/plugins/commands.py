@@ -11,8 +11,8 @@ db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-   
-      try:
+    
+    try:
         file_uid = update.command[1]
     except IndexError:
         file_uid = False
@@ -22,7 +22,7 @@ async def start(bot, update):
         
         if (file_id or file_type) == None:
             return
-        
+ 
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
       
             try:
