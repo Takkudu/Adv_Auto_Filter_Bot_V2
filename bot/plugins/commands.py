@@ -22,10 +22,9 @@ async def start(bot, update):
         
         if (file_id or file_type) == None:
             return
- 
+        
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
-      
-            try:
+        try:
             await update.reply_cached_media(
                 file_id,
                 quote=True,
@@ -36,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '♻️SHARE ME♻️', url="https://t.me/share/url?url=%20https://t.me/Cinimafactory2"
+                                    '♻️SHARE ME♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
                                 )
                         ]
                     ]
@@ -48,10 +47,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🔥My Dev', url='https://t.me/anilsebastian'),
-        InlineKeyboardButton('Source Code 🧾', url='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
+        InlineKeyboardButton('🔥My Dev', url='https://t.me/Techno_ka_magic'),
+        InlineKeyboardButton('Source Code 🧾', url ='')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/Asbotz')
+        InlineKeyboardButton('Support 🛠', url='https://t.me/asbotz')
     ],[
         InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
