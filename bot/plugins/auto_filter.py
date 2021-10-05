@@ -60,8 +60,13 @@ async def auto_filter(bot: Client, update: Message):
     # show_invite = (False if pm_file_chat == True else show_invite) # turn show_invite to False if pm_file_chat is True
     
     filters = await db.get_filters(group_id, query)
-    
+        
     if filters:
+        results.append(
+                [
+                    InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=f"https://t.me/joinchat/nAJOyC9EPe5kMTBl")
+                ]
+            )
         for filter in filters: # iterating through each files
             file_name = filter.get("file_name")
             file_type = filter.get("file_type")
