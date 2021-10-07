@@ -7,7 +7,7 @@ class Translation(object):
     START_TEXT = """<b>Hey {}!!</b>
 <i>𝑰𝒎 𝑱𝒖𝒔𝒕 𝑨 𝑨𝒅𝒗𝒂𝒏𝒄𝒆 𝑨𝒖𝒕𝒐 𝑭𝒊𝒍𝒕𝒆𝒓 𝑩𝒐𝒕.😉
 
-𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝒐𝒇𝒇𝒊𝒄𝒊𝒂𝒍𝒍𝒚 𝒂𝒕 <a href="@cinimafactory2">ᏟᏆΝᎬᎷᎪ ҒᎪᏟͲϴᎡᎽ </a>
+𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝒐𝒇𝒇𝒊𝒄𝒊𝒂𝒍𝒍𝒚 𝒂𝒕 @cinimafactory2
 𝑻𝒐 𝒌𝒏𝒐𝒘 𝑴𝒐𝒓𝒆 𝒂𝒃𝒐𝒖𝒕 𝒎𝒚 𝑭𝒖𝒏𝒄𝒕𝒊𝒐𝒏𝒔 𝑪𝒍𝒊𝒄𝒌  𝑯𝒆𝒍𝒑⚙️.
 
 𝘔𝘢𝘪𝘯𝘵𝘢𝘪𝘯𝘦𝘥 𝘉𝘺: <a href="https://t.me/ASBotz">𝑨𝑺𝑩𝒐𝒕𝒛 </a>
