@@ -209,7 +209,7 @@ async def auto_filter(bot: Client, update: Message):
         reply_markup = InlineKeyboardMarkup(result[0])
 
         try:
-            await bot.send_message(
+            await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= MASSAGE_PHOTO,
                 text=f"<b>🌩 𝐓𝐨𝐭𝐚𝐥 𝐑𝐞𝐬𝐮𝐥𝐭𝐬: {(len_results)} </b>\n<b>🎬 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬:</b> <code>{query}</code>",
