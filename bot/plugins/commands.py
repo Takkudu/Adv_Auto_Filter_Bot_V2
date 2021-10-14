@@ -27,7 +27,6 @@ async def start(bot, update):
               ])
             )
             return
-
     try:
         file_uid = update.command[1]
     except IndexError:
