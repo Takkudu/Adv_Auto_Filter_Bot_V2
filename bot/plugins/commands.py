@@ -11,7 +11,23 @@ db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-    
+        update_channel = cinimafactory2
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked out":
+               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎ 🤣🤣🤣**")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text=Mo_Tech_YT.MO_TECH_YT_14,
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text=" 📢 Join My Update Channel 📢", url=f"https://t.me/{cinimafactory2}")]
+              ])
+            )
+            return
+
     try:
         file_uid = update.command[1]
     except IndexError:
