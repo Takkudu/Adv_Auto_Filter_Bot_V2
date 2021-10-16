@@ -12,7 +12,7 @@
     "success_url": "https://telegram.dog/CrazyBotsz",
     "env": {
         "APP_ID": {
-            "description": "Your APP ID From my.telegram.org or @UseTGXBot",
+            "description": "Your APP ID From my.telegram.org is good",
             "value": ""
         },
         "API_HASH": {
@@ -25,7 +25,7 @@
         },
         "START_PHOTO": {
             "description": "Welcome message for start command",
-            "value": "**https://telegra.ph/file/92daa86a5ceb28fa6962d.jpg**",
+            "value": "**https://telegra.ph/file/f036cd9772a3c83e0a160.jpg**",
             "required": false
         },
         "DB_URI": {
