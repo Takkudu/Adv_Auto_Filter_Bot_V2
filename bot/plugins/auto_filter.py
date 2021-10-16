@@ -208,7 +208,7 @@ async def auto_filter(bot: Client, update: Message):
             
         reply_markup = InlineKeyboardMarkup(result[0])
       
-       try:
+        try:
             ia = imdb.IMDb()
             my_movie=the_query
             movies = ia.search_movie(my_movie)
