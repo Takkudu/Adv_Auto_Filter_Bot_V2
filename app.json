@@ -23,6 +23,11 @@
             "description": "Your Bot Token From @BotFather",
             "value": ""
         },
+        "START_PHOTO": {
+            "description": "Welcome message for start command",
+            "value": "**https://telegra.ph/file/92daa86a5ceb28fa6962d.jpg**",
+            "required": false
+        },
         "DB_URI": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
             "value": ""
