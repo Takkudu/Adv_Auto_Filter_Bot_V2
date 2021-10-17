@@ -1,40 +1,17 @@
-# (c) @SpEcHIDe
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG
-# (c) @Muhammed_RK, @Mo_Tech_YT , @Mo_Tech_Group, @MT_Botz
-# Copyright permission under MIT License
-# All rights reserved by PR0FESS0R-99
-# License -> https://github.com/PR0FESS0R-99/DonLee_Robot/blob/main/LICENSE
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from pyrogram.errors import UserNotParticipant
-from DonLee_Robot import Translation, LOGGER, Mo_Tech_YT
-from DonLee_Robot.Modules.Filters import Database
-from DonLee_Robot.donlee_robot import DonLee_Robot
-from DonLee_Robot.Modules import DEPLOY, HEROKU
+from bot import Translation, LOGGER # pylint: disable=import-error
+from bot.database import Database # pylint: disable=import-error
+
 db = Database()
 
-@DonLee_Robot.on_message(filters.command(["start"]) & filters.private, group=1)
+@Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-    update_channel = Mo_Tech_YT.MO_TECH_YT_15
-    if update_channel:
-        try:
-            user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("😔 Sorry Dude, You are **🅱︎🅰︎🅽︎🅽︎🅴︎🅳︎ 🤣🤣🤣**")
-               return
-        except UserNotParticipant:
-            #await update.reply_text(f"Join @{update_channel} To Use Me")
-            await update.reply_text(
-                text=Mo_Tech_YT.MO_TECH_YT_14,
-                reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 📢 Join My Update Channel 📢", url=f"https://t.me/{Mo_Tech_YT.MO_TECH_YT_15}")]
-              ])
-            )
-            return
-        except Exception:
-            await update.reply_text(f"<b>This bot should be the admin on your update channel</b>\n\n<b>💢 ഈ ചാനലിൽ  @{Mo_Tech_YT.MO_TECH_YT_15} ബോട്ടിനെ അഡ്മിൻ ആക്. എന്നിട്ട് /start കൊടുക്</b>\n\n<b>🗣️ any Doubt @Mo_Tech_Group</b>")
-            return
+     
     try:
         file_uid = update.command[1]
     except IndexError:
@@ -56,9 +33,9 @@ async def start(bot, update):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            Mo_Tech_YT.MO_TECH_YT_02
+                            InlineKeyboardButton
                                 (
-                                    DEPLOY, url=HEROKU
+                                    '♻️ՏᎻᎪᎡᎬ ᎷᎬ♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
                                 )
                         ]
                     ]
@@ -69,31 +46,14 @@ async def start(bot, update):
             LOGGER(__name__).error(e)
         return
 
-    buttons = [
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              '📢Update Channel', url='t.me/Mo_Tech_YT'
-                          ),
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              '💡More Botz', url='t.me/MT_Botz'
-                          )
-                  ],
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              DEPLOY, url=HEROKU
-                          )
-                  ],
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              '🚶Help', callback_data='help'
-                          )
-                  ]           
-              ]
-
+    buttons = [[
+        InlineKeyboardButton('🔥ᎷᎽ ᎠᎬᏙ', url='https://t.me/Techno_ka_magic'),
+        InlineKeyboardButton('ՏϴႮᎡᏟᎬ ᏟϴᎠᎬ🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
+    ],[
+        InlineKeyboardButton('ՏႮᏢᏢϴᎡͲ 🛠', url='https://t.me/asbotz')
+    ],[
+        InlineKeyboardButton('ᎻᎬᏞᏢ ⚙', callback_data="help")
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
@@ -106,26 +66,15 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@DonLee_Robot.on_message(filters.command(["help"]) & filters.private, group=1)
+
+@Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
-    buttons = [
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              DEPLOY, url=HEROKU
-                          )
-                  ],
-                  [   
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              '🏡 Home', callback_data='start'
-                          ),
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              'About💡', callback_data='about'
-                          )
-                  ]
-              ]
+    buttons = [[
+        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
+        InlineKeyboardButton('ᎪᏴϴႮͲ 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
@@ -138,33 +87,20 @@ async def help(bot, update):
     )
 
 
-@DonLee_Robot.on_message(filters.command(["about"]) & filters.private, group=1)
+@Client.on_message(filters.command(["about"]) & filters.private, group=1)
 async def about(bot, update):
     
-    buttons = [
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              DEPLOY, url=HEROKU
-                          )
-                  ],
-                  [
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              '🏠 Home', callback_data='start'
-                          ),
-                      Mo_Tech_YT.MO_TECH_YT_02
-                          (
-                              'Close ❌️', callback_data='close'
-                          )
-                  ]
-              ]
+    buttons = [[
+        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
+        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
+    ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
+        disable_web_page_preview=True,
         parse_mode="html",
         reply_to_message_id=update.message_id
     )
