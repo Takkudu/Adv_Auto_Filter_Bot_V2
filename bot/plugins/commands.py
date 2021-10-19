@@ -58,10 +58,11 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await message.reply_photo(photo=https://telegra.ph/file/605bf4fdea60c9923cab1.jpg, caption=START_MSG.format(message.from_user.mention),
-            reply_markup=InlineKeyboardMarkup(
+    await update.reply_photo(
+        "https://telegra.ph/file/bf038c38666d51adeada9.jpg",
+        caption=START_TEXT.format(update.from_user.first_name),
+        reply_markup=reply_markup,
     )
-
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
