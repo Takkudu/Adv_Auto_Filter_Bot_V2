@@ -23,7 +23,7 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
         
-        caption = file_caption if file_caption != ("𝙅𝙊𝙄𝙉 ❤️@CinemaFactory_All 😉") else ("<code>" + file_name + "</code>")
+        caption = file_caption if file_caption != ("") or None)else ("<code>" + file_name + "</code>")
         try:
             await update.reply_cached_media(
                 file_id,
@@ -48,7 +48,7 @@ async def start(bot, update):
 
     buttons = [[
         InlineKeyboardButton('🔥 MY DEV', url='https://t.me/techno_ka_magic'),
-        InlineKeyboardButton('CODE 🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
+        InlineKeyboardButton('SOURCE CODE 🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
     ],[
         InlineKeyboardButton('SUPPORT 🛠', url='https://t.me/ASBOTZ')
     ],[
