@@ -57,7 +57,7 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await message.reply_photo(photo=START_IMG, caption=START_MSG.format(message.from_user.mention),
+    await message.reply_photo(photo=https://telegra.ph/file/605bf4fdea60c9923cab1.jpg, caption=START_MSG.format(message.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
     )
 
