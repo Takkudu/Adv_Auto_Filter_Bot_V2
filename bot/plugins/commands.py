@@ -11,7 +11,7 @@ db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-     
+    
     try:
         file_uid = update.command[1]
     except IndexError:
@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '♻️ՏᎻᎪᎡᎬ ᎷᎬ♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
+                                    '♻️SHARE ME♻️', url=https://t.me/share/url?url=%20https://t.me/cinimafactory2""
                                 )
                         ]
                     ]
@@ -47,33 +47,15 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🔥ᎷᎽ ᎠᎬᏙ', url='https://t.me/Techno_ka_magic'),
-        InlineKeyboardButton('ՏϴႮᎡᏟᎬ ᏟϴᎠᎬ🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
+        InlineKeyboardButton('🔥 MY DEV', url='https://t.me/techno_ka_magic'),
+        InlineKeyboardButton('CODE 🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
     ],[
-        InlineKeyboardButton('ՏႮᏢᏢϴᎡͲ 🛠', url='https://t.me/asbotz')
+        InlineKeyboardButton('SUPPORT 🛠', url='https://t.me/ASBOTZ')
     ],[
-        InlineKeyboardButton('ᎻᎬᏞᏢ ⚙', callback_data="help")
+        InlineKeyboardButton('HELP ⚙', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await update.reply_photo(
-        "https://telegra.ph/file/bf038c38666d51adeada9.jpg",
-        caption=START_TEXT.format(update.from_user.first_name),
-        reply_markup=reply_markup,
-    )
-
-@Client.on_message(filters.command(["help"]) & filters.private, group=1)
-async def help(bot, update):
-    buttons = [[
-        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
-        InlineKeyboardButton('ᎪᏴϴႮͲ 🚩', callback_data='about')
-    ],[
-        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
     
     await bot.send_message(
         chat_id=update.chat.id,
@@ -85,12 +67,32 @@ async def help(bot, update):
     )
 
 
+@Client.on_message(filters.command(["help"]) & filters.private, group=1)
+async def help(bot, update):
+    buttons = [[
+        InlineKeyboardButton('HOME ⚡', callback_data='start'),
+        InlineKeyboardButton('ABOUT 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('CLOSE 🔐', callback_data='close')
+    ]]
+    
+    reply_markup = InlineKeyboardMarkup(buttons)
+    
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.HELP_TEXT,
+        reply_markup=reply_markup,
+        parse_mode="html",
+        reply_to_message_id=update.message_id
+    )
+
+
 @Client.on_message(filters.command(["about"]) & filters.private, group=1)
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('ᎻϴᎷᎬ ⚡', callback_data='start'),
-        InlineKeyboardButton('ᏟᏞϴՏᎬ 🔐', callback_data='close')
+        InlineKeyboardButton('HOME ⚡', callback_data='start'),
+        InlineKeyboardButton('CLOSE 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
