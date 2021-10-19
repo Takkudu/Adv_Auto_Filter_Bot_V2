@@ -470,7 +470,7 @@ class Database(metaclass=Singleton):
         file_id = None
         file_type = None
         file_name = None
-        file_caption ="➖️ @cinemafactory_all ➖️"
+        file_caption = None
         
         if file:
             file_id = file.get("file_id")
