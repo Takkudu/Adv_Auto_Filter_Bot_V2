@@ -23,7 +23,7 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
         
-        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
+        caption = file_caption if file_caption != ("𝙅𝙊𝙄𝙉 [❤️ℂ𝕚𝕟𝕖𝕞𝕒𝔽𝕒𝕔𝕥𝕠𝕣𝕪_𝔸𝕝𝕝😉](https://t.me/cinemafactory_all)") else ("<code>" + file_name + "</code>")
         try:
             await update.reply_cached_media(
                 file_id,
@@ -35,7 +35,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '♻️SHARE ME♻️', url=https://t.me/share/url?url=%20https://t.me/cinimafactory2""
+                                    '♻️SHARE ME♻️', url="https://t.me/share/url?url=%20https://t.me/cinimafactory2"
                                 )
                         ]
                     ]
