@@ -32,25 +32,25 @@ async def cb_about(bot, update: CallbackQuery):
     text=f"<i><u>Bot's Status</u></i>\n"
     text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
     text+=f"\n<b><i>Bot Funtion:</i></b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/CrazyBotszGrp">@CrazyBotszGrp</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2">Source</a>"""
+    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/techno_kamagic">@techno_kamagic</a>\n"""
+    text+="""\n<b><i>📄Source Code:</i></b> <a href="https://t.me/ASBOTZ">Source</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
+                    "🔥MY DEV", url="https://t.me/Techno_ka_magic"
                 ),
                 
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data="settings"
+                    "🔙 BACK", callback_data="settings"
                 )
         ],
         [
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "CLOSE 🔐", callback_data="close"
                 )
         ]
     ]
