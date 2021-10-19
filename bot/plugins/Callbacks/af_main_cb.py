@@ -403,12 +403,12 @@ async def cb_set(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Back 🔙", callback_data=f"config({chat_id})"
+                    "BACK 🔙", callback_data=f"config({chat_id})"
                 ),
             
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "CLOSE 🔐", callback_data="close"
                 )
         ]
     ]
@@ -428,12 +428,12 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/CrazyBotsz'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+            InlineKeyboardButton('MY DEV 👨‍🔬', url='https://t.me/ASBOTZ'),
+            InlineKeyboardButton('SOURCE CODE 🧾', url ='https://t.me/ASBOTZ')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+            InlineKeyboardButton('SUPPORT 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help")
+            InlineKeyboardButton('HELP ⚙', callback_data="help")
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -448,10 +448,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "help":
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('About 🚩', callback_data='about')
+            InlineKeyboardButton('HOME ⚡', callback_data='start'),
+            InlineKeyboardButton('ABOUT 🚩', callback_data='about')
         ],[
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('CLOSE 🔐', callback_data='close')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -466,8 +466,8 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('HOME ⚡', callback_data='start'),
+            InlineKeyboardButton('CLOSE 🔐', callback_data='close')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
