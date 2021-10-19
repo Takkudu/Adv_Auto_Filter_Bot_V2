@@ -50,7 +50,8 @@ async def start(bot, update):
         InlineKeyboardButton('🔥 MY DEV', url='https://t.me/techno_ka_magic'),
         InlineKeyboardButton('SOURCE CODE 🧾', url ='https://t.me/joinchat/Nl6kfq6CW_tlYWM9')
     ],[
-        InlineKeyboardButton('SUPPORT 🛠', url='https://t.me/ASBOTZ')
+        InlineKeyboardButton('SUPPORT GROUP🛠', url='https://t.me/techno_kamagic')
+        InlineKeyboardButton('SUPPORT CHANNEL⚒️', url='https://t.me/ASBOTZ')
     ],[
         InlineKeyboardButton('HELP ⚙', callback_data="help")
     ]]
