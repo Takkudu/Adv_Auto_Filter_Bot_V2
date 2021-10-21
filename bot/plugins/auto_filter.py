@@ -207,25 +207,8 @@ async def auto_filter(bot: Client, update: Message):
             
             
         reply_markup = InlineKeyboardMarkup(result[0])
-      
-        try:
-            ia = imdb.IMDb()
-            my_movie=the_query
-            movies = ia.search_movie(my_movie)
-            #print(f"{movies[0].movieID} {movies[0]['title']}")
-            movie_url = movies[0].get_fullsizeURL()
 
-            await bot.send_photo(
-                photo=movie_url,
-                caption=f"""🎬 Title : {query}\n🗃️ Total Files : {len_results if len_results <= max_pages*8 else max_pages*8}""",
-                reply_markup=reply_markup,
-                chat_id=update.chat.id,
-                reply_to_message_id=update.message_id,
-                parse_mode="html"
-            )
 
-        except Exception as e:
-          print(e)
 
         try:
             await bot.send_message(
