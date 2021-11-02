@@ -28,7 +28,7 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = ❤️JOIN [ℂ𝕚𝕟𝕖𝕞𝕒𝔽𝕒𝕔𝕥𝕠𝕣𝕪_𝔸𝕝𝕝](https://t.me/cinemafactory_all),
+                caption = ❤️JOIN @CinemaFactory_All😉,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
