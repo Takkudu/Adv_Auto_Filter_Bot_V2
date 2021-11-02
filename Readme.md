@@ -2,12 +2,12 @@
 
 <p align="center">
   <a href="https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2/stargazers">
-    <img src="https://img.shields.io/github/stars/CrazyBotsz/Adv-Auto-Filter-Bot-V2?style=social">
+    <img src="https://img.shields.io/github/stars/Takkudu/Adv_Auto_Filter_Bot_V2?style=social">
 
   </a>
   
   <a href="https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2/fork">
-    <img src="https://img.shields.io/github/forks/CrazyBotsz/Adv-Auto-Filter-Bot-V2?label=Fork&style=social">
+    <img src="https://img.shields.io/github/forks/Takkudu/Adv_Auto_Filter_Bot_V2?label=Fork&style=social">
 
   </a>  
 </p>
