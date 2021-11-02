@@ -1,6 +1,6 @@
 {
     "name": "Automatic Filter Bot V2",
-    "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
+    "description": "A Filter Bot ",
     "logo": "https://telegra.ph/file/138db962893023bd9885a.jpg",
     "keywords": [
         "Auto",
@@ -8,7 +8,7 @@
         "Mongo DB"
     ],
     "website": "https://github.com/Takkudu",
-    "repository": "https://github.com/Takkudu/Adv-Auto-Filter-Bot-V2",
+    "repository": "https://github.com/Takkudu/Adv_Auto_Filter_Bot_V2",
     "success_url": "https://telegram.dog/ASBOTZ",
     "env": {
         "APP_ID": {
