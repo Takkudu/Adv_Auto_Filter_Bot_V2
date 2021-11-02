@@ -1,15 +1,15 @@
 {
-    "name": "Auto Filter Bot V2",
+    "name": "Automatic Filter Bot V2",
     "description": "A Filter Bot Which Doesnt Need Manuall Filter Adding",
-    "logo": "https://telegra.ph/file/f036cd9772a3c83e0a160.jpg",
+    "logo": "https://telegra.ph/file/138db962893023bd9885a.jpg",
     "keywords": [
         "Auto",
         "Filter",
         "Mongo DB"
     ],
-    "website": "https://github.com/AlbertEinsteinTG",
-    "repository": "https://github.com/AlbertEinsteinTG/Adv-Auto-Filter-Bot-V2",
-    "success_url": "https://telegram.dog/CrazyBotsz",
+    "website": "https://github.com/Takkudu",
+    "repository": "https://github.com/Takkudu/Adv-Auto-Filter-Bot-V2",
+    "success_url": "https://telegram.dog/ASBOTZ",
     "env": {
         "APP_ID": {
             "description": "Your APP ID From my.telegram.org is good",
@@ -22,11 +22,6 @@
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
             "value": ""
-        },
-        "START_PHOTO": {
-            "description": "Welcome message for start command",
-            "value": "**https://telegra.ph/file/f036cd9772a3c83e0a160.jpg**",
-            "required": false
         },
         "DB_URI": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
