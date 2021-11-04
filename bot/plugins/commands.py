@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) @AlbertEinsteinTG 
+# (c) @AlbertEinsteinTG
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from pyrogram.errors import UserNotParticipant
-from bot import Translation # pylint: disable=import-error
+from bot import Translation, LOGGER # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 
 db = Database()
@@ -24,7 +23,7 @@ async def start(bot, update):
         if (file_id or file_type) == None:
             return
         
-        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")           
+        caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
         try:
             await update.reply_cached_media(
                 file_id,
@@ -36,34 +35,32 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/CrazyBotsz"
+                                      '......', url="https://t.me/CrazyBosz"
                                 )
                         ]
                     ]
                 )
             )
-       except Exception as e:
+        except Exception as e:
             await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
         return
 
     buttons = [[
-        InlineKeyboardButton('🛡️ 🄶🅁🄾🅄🄿', url='https://t.me/Techno_KaMagic'),
-        InlineKeyboardButton('👼 𝘾𝙍𝙀𝘼𝙏𝙊𝙍', url ='https://t.me/Techno_Ka_Magic')
-        ],[
-        InlineKeyboardButton('⚔️ 𝙅𝙊𝙄𝙉 𝙊𝙐𝙍 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 ⚔️', url ='https://t.me/ASBOTZ')
-        ],[
-        InlineKeyboardButton('🤠 𝙃𝙀𝙇𝙋', callback_data="help"),
-        InlineKeyboardButton('🔐 𝘾𝙇𝙊𝙎𝙀', callback_data="close")
-        ]]
+        InlineKeyboardButton('Developers', url='https://t.me/CrazyBosz'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrayBotsz/Adv-Auto-Filter-Bot-V2')
+    ],[
+        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBoszGrp')
+    ],[
+        InlineKeyboardButton('Help ⚙', callback_data="help")
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.send_message(
         chat_id=update.chat.id,
-        photo="https://telegra.ph/file/605bf4fdea60c9923cab1.jpg",
-        caption=Translation.START_TEXT.format(
-                update.from_user.mention),
+        text=Translation.START_TEXT.format(
+                update.from_user.first_name),
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=update.message_id
@@ -73,18 +70,17 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('𝙃𝙤𝙢𝙚 🏘', callback_data='start'),
-        InlineKeyboardButton('𝘼𝙗𝙤𝙪𝙩 👿', callback_data='about')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
     ],[
-        InlineKeyboardButton('𝘾𝙡𝙤𝙨𝙚 🔐', callback_data='close')
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_photo(
+    await bot.send_message(
         chat_id=update.chat.id,
-        photo="https://telegra.ph/file/605bf4fdea60c9923cab1.jpg",
-        caption=Translation.HELP_TEXT,
+        text=Translation.HELP_TEXT,
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=update.message_id
@@ -95,8 +91,8 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('𝙃𝙤𝙢𝙚 🏘', callback_data='start'),
-        InlineKeyboardButton('𝘾𝙡𝙤𝙨𝙚 🔐', callback_data='close')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
