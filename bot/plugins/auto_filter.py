@@ -139,7 +139,9 @@ async def auto_filter(bot: Client, update: Message):
             text=f"""<b></b>
 𝙃𝙞, {update.from_user.mention}! 𝙎𝙤𝙧𝙧𝙮 𝙞 𝙙𝙞𝙙𝙣'𝙩 𝙜𝙚𝙩 𝙩𝙝𝙖𝙩 𝙛𝙞𝙡𝙚 𝙮𝙤𝙪 𝙬𝙝𝙚𝙧𝙚 𝙡𝙤𝙤𝙠𝙞𝙣𝙜 𝙛𝙤𝙧
 ★ iee movie ente database il added alla || bro chodicha moviede spelling correct ano ennu Google nokki check cheyiyukka .
-
+          results.append([
+          InlineKeyboardButton("🤧check spelling", url="http://www.google.com/"),
+        ])
 """,
             
             
@@ -156,10 +158,6 @@ async def auto_filter(bot: Client, update: Message):
         
          reply_to_message_id=update.message_id
         )
-       
-        [
-          InlineKeyboardButton("🤧check spelling", url="http://www.google.com/"),
-        ]
      
         await asyncio.sleep(10)
         await Send_message.delete()
