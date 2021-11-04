@@ -28,9 +28,6 @@ async def start(bot, update):
               ])
             )
             return
-        except Exception:
-            await update.reply_text("SRY DIDN'T JOINED OUR @CinemaFactory_All CHANNEL THAT'S Y THIS IS HAPPENING")
-            return
     try:
         file_uid = update.command[1]
     except IndexError:
