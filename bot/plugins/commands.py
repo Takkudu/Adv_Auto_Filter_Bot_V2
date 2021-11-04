@@ -25,6 +25,27 @@ async def start(bot, update):
             return
         
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")           
+          try:
+            await update.reply_cached_media(
+                file_id,
+                quote=True,
+                caption = caption,
+                parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton
+                                (
+                                    'Developers', url="https://t.me/CrazyBotsz"
+                                )
+                        ]
+                    ]
+                )
+            )
+        except Exception as e:
+            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+            LOGGER(__name__).error(e)
+        return
 
     buttons = [[
         InlineKeyboardButton('🛡️ 🄶🅁🄾🅄🄿', url='https://t.me/Techno_KaMagic'),
