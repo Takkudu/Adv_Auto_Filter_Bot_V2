@@ -32,18 +32,16 @@ async def start(bot, update):
                 caption = caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-                      [
-                [
-                    InlineKeyboardButton('⭕️ 𝙎𝙃𝘼𝙍𝙀 ⭕️', url='https://t.me/share/url?url=https://t.me/cinimafactory2')
-                ],
-                [
-                    InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋 💬', url='https://t.me/cinimafactory2'),
-                    InlineKeyboardButton('‼️ 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/cinemafactory_all),
-                ]
-            ]
-        )
-    )
-
+                    [
+                        [
+                            InlineKeyboardButton
+                                (
+                                    'Developers', url="https://t.me/CrazyBotsz"
+                                )
+                        ]
+                    ]
+                )
+            )
        except Exception as e:
             await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
