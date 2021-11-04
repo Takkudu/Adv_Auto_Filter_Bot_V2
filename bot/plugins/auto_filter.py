@@ -127,15 +127,38 @@ async def auto_filter(bot: Client, update: Message):
                 bot_ = FIND.get("bot_details")
                 file_link = f"https://t.me/{bot_.username}?start={unique_id}"
             
-            results.append(
-                [
-                    InlineKeyboardButton(button_text, url=file_link)
-                ]
-            )
+            results.append([
+            InlineKeyboardButton(file_names, url=file_link),
+            InlineKeyboardButton(" 📂 " + f_size, url=file_link)
+        ])
+            
         
     else:
-        return # return if no files found for that query
-    
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text=f"""<b>
+𝙃𝙞, {update.from_user.mention}! 𝙎𝙤𝙧𝙧𝙮 𝙞 𝙙𝙞𝙙𝙣'𝙩 𝙜𝙚𝙩 𝙩𝙝𝙖𝙩 𝙛𝙞𝙡𝙚 𝙮𝙤𝙪 𝙬𝙝𝙚𝙧𝙚 𝙡𝙤𝙤𝙠𝙞𝙣𝙜 𝙛𝙤𝙧
+★ iee movie ente database il added alla || bro chodicha moviede spelling correct ano ennu Google nokki check cheyiyukka .
+
+""",
+            
+            
+                
+              
+                
+                
+                
+                
+                
+                    
+                
+           
+        
+         reply_to_message_id=update.message_id
+        )
+
+        await asyncio.sleep(10)
+        await Send_message.delete()
 
     if len(results) == 0: # double check
         return
