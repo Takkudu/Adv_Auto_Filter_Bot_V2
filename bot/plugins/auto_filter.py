@@ -158,7 +158,7 @@ async def auto_filter(bot: Client, update: Message):
         )
        
         [
-          InlineKeyboardButtonu("🤧check spelling", url="http://www.google.com/"),
+          InlineKeyboardButton("🤧check spelling", url="http://www.google.com/"),
         ]
      
         await asyncio.sleep(10)
