@@ -13,7 +13,7 @@ db = Database()
 async def start(bot, update):
 
    update_channel = "@CinemaFactory_All"
-  if update_channel:
+if update_channel:
         try:
             user = await bot.get_chat_member(update_channel, update.chat.id)
             if user.status == "kicked out":
