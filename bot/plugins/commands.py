@@ -12,25 +12,6 @@ db = Database()
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
 
-   update_channel = "@CinemaFactory_All"
-   if update_channel:
-        try:
-            user = await bot.get_chat_member(update_channel, update.chat.id)
-            if user.status == "kicked out":
-               await update.reply_text("🤭 Sorry BRO, You are B A N N E D 🤣🤣🤣")
-               return
-        except UserNotParticipant:
-            #await update.reply_text(f"Join @{update_channel} To Use Me")
-            await update.reply_text(
-                text="<b>😌 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 📑\n\n TO ACSEES TO GET DESIRED MOVIES FILES U SHOULD JOIN OUR CHANNEL,AFTER U AGAIN SEND /start COMMAND . THAT'S ALL \n\🛡️✌️ THANK YOU ❤️</b>",
-                reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text=" 🔰JOIN OUR CHANNEL🔰 ", url=f"https://t.me/CinemaFactory_All")]
-              ])
-            )
-            return
-        except Exception:
-            await update.reply_text("SRY DIDN'T JOINED OUR @CinemaFactory_All CHANNEL THAT'S Y THIS IS HAPPENING")
-            return
    try:
         file_uid = update.command[1]
     except IndexError:
