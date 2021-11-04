@@ -156,9 +156,11 @@ async def auto_filter(bot: Client, update: Message):
         
          reply_to_message_id=update.message_id
         )
+       
         [
           InlineKeyboardButtonu("🤧check spelling", url="http://www.google.com/"),
-
+        ]
+     
         await asyncio.sleep(10)
         await Send_message.delete()
 
