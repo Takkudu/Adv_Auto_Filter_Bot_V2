@@ -64,8 +64,8 @@ async def auto_filter(bot: Client, update: Message):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("⭕️ 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 ⭕️", url="https://t.me/joinchat/nAJOyC9EPe5kMTBl"),
-                    InlineKeyboardButton("☮︎ 𝙇𝙄𝙉𝙆𝙎 ☮︎", url="https://t.me/Cinemafactory_all"),
+                    InlineKeyboardButton("💢𝘾𝙃𝘼𝙉𝙉𝙀𝙇💢", url="https://t.me/joinchat/nAJOyC9EPe5kMTBl"),
+                    InlineKeyboardButton("⭕️𝙇𝙄𝙉𝙆𝙎⭕️", url="https://t.me/Cinemafactory_all"),
                 ]
             )
         for filter in filters: # iterating through each files
