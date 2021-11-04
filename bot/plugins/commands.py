@@ -43,7 +43,8 @@ async def start(bot, update):
             ]
         )
     )
-        except Exception as e:
+
+       except Exception as e:
             await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
         return
