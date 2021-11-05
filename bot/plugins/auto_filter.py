@@ -136,9 +136,13 @@ async def auto_filter(bot: Client, update: Message):
         Send_message = await bot.send_message(
             chat_id=update.chat.id,
             text=f"""<b></b>
-𝙃𝙞, {update.from_user.mention}! 𝙎𝙤𝙧𝙧𝙮 𝙞 𝙙𝙞𝙙𝙣'𝙩 𝙜𝙚𝙩 𝙩𝙝𝙖𝙩 𝙛𝙞𝙡𝙚 𝙮𝙤𝙪 𝙬𝙝𝙚𝙧𝙚 𝙡𝙤𝙤𝙠𝙞𝙣𝙜 𝙛𝙤𝙧
-★ iee movie ente database il added alla || bro chodicha moviede spelling correct ano ennu Google nokki check cheyiyukka.
-🤧check spelling 👉http://www.google.com/
+★𝙃𝙞,Dear {update.from_user.mention} ,𝙎𝙤𝙧𝙧𝙮 𝙞 𝙙𝙞𝙙𝙣'𝙩 𝙜𝙚𝙩 𝙩𝙝𝙖𝙩 𝙛𝙞𝙡𝙚 𝙮𝙤𝙪 𝙬𝙝𝙚𝙧𝙚 𝙡𝙤𝙤𝙠𝙞𝙣𝙜 𝙛𝙤𝙧
+
+
+➤ The Movie that you requested is not in my Database.
+
+➤ Search the correct name on Google.
+http://www.google.com/
           
 """,
             
