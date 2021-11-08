@@ -242,7 +242,7 @@ http://www.google.com/
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo="https://telegra.ph/file/138db962893023bd9885a.jpg"
-                caption=f"<b>🌟𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n🎬𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} \n🌩️𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} \n\n🔰ᴄʟɪᴄᴋ ᴅᴏᴡɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ғᴏʀ ᴀᴄᴄᴇssɪɴɢ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ👇</b>",
+                text=f"<b>🌟𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐁𝐲:- {update.from_user.mention} \n\n🎬𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐌𝐨𝐯𝐢𝐞:- {query} \n🌩️𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐮𝐧𝐝:- {(len_results)} \n\n🔰ᴄʟɪᴄᴋ ᴅᴏᴡɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ғᴏʀ ᴀᴄᴄᴇssɪɴɢ ᴛʜᴇ ᴍᴏᴠɪᴇ ғɪʟᴇ👇</b>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
