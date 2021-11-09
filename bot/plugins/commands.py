@@ -28,7 +28,7 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption ="<b>caption\n\n𝙅𝙊𝙄𝙉 ❤️@CinemaFactory_All😉</b>",
+                caption =caption,
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
                     [
