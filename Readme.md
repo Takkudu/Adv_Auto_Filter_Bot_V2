@@ -73,7 +73,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/Takkudu/Adv_Auto_Filter_Bot_V2/tree/main">
+<a href="https://heroku.com/deploy?template=https://github.com/Takkudu/Adv_Auto_Filter_Bot_V2/tree/master">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
