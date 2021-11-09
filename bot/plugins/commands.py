@@ -45,13 +45,12 @@ async def start(bot, update):
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
         
         if file_type == "document":
-        
-            await bot.send_document(
-                chat_id=update.chat.id,
-                document = file_id,
-                caption = "<b>{file_name}\n\n┈••✿ UMR GROUP ✿••┈\n\n➠𝐂ʜᴀɴɴᴇʟ :https://t.me/UNI_MOVIES_BOX\n\n➠Gʀᴏᴜᴘ : https://t.me/UM_REQUSTS</b>",
+       
+            await update.reply_cached_media(
+                file_id,
+                quote=True,
+                caption ="<b>{file_name}\n\n┈••✿ UMR GROUP ✿••┈\n\n➠𝐂ʜᴀɴɴᴇʟ :https://t.me/UNI_MOVIES_BOX\n\n➠Gʀᴏᴜᴘ : https://t.me/UM_REQUSTS</b>",
                 parse_mode="html",
-                reply_to_message_id=update.message_id
                 reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -64,49 +63,9 @@ async def start(bot, update):
             ]
         )
     )
-
-        elif file_type == "video":
-        
-            await bot.send_video(
-                chat_id=update.chat.id,
-                video = file_id,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton('⭕️ 𝙎𝙃𝘼𝙍𝙀 ⭕️', url='https://t.me/share/url?url=https://t.me/Cinemafactory_all')
-                ],
-                [
-                    InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋 💬', url='https://t.me/cinimafactory2'),
-                    InlineKeyboardButton('‼️ 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/cinemafactory_all')
-                ]
-            ]
-        )
-    )
-            
-        elif file_type == "audio":
-        
-            await bot.send_audio(
-                chat_id=update.chat.id,
-                audio = file_id,
-                caption = caption,
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    '⚠️ 𝗝𝗢𝗜𝗡 𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣 ⚠️', url="https://t.me/DB_ROBOTS"
-                                )
-                        ]
-                    ]
-                )
-            )
-
-        else:
-            print(file_type)
-        
+  except Exception as e:
+            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+            LOGGER(__name__).error(e)
         return
 
     buttons = [[
